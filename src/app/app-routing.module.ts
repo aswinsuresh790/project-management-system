@@ -1,8 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SpacesComponent } from './spaces/spaces.component';
+import { TaskComponent } from './task/task.component';
+import { MembersComponent } from './members/members.component';
+import { LogoutComponent } from './auth/logout/logout.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
+const routes: Routes = [
+  { path: 'profile', component: ProfileComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'members', component: MembersComponent },
+  { path: 'spaces', component: SpacesComponent },
+  { path: 'task', component: TaskComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: '', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
-const routes: Routes = [];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
